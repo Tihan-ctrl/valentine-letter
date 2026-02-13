@@ -1,0 +1,103 @@
+/* General Setup */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffeef2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Animations */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHlsZHk5NGg2N2FoeW15YnF4MDg3eWthZjlqbmNsam5lcDc5Y3UxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HJibfnd7xqk5hAMD4v/giphy.gif'); /* Heart pattern GIF */
+    background-size: 200px;
+    opacity: 0.15;
+}
+
+/* Envelope Styling */
+.envelope-wrapper {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.envelope-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #ff8fa3;
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 80px solid #ff4d6d;
+    z-index: 2;
+}
+
+.heart {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    z-index: 3;
+    animation: pulse 1.5s infinite;
+}
+
+/* Letter Content Styling */
+.letter-content {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px;
+    text-align: center;
+    color: #590d22;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.cat-gif {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.instruction {
+    color: #ff4d6d;
+    font-weight: bold;
+    margin-top: 20px;
+}

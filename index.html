@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Letter for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <div class="envelope-wrapper" id="envelopeWrapper" onclick="openLetter()">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="body"></div>
+                <div class="heart">❤️</div>
+            </div>
+            <p class="instruction">Click to open your Valentine's surprise!</p>
+        </div>
+
+        <div class="letter-content" id="letterContent">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueGZ3bm56ZzR0bmZ3bm56ZzR0bmZ3bm56ZzR0bmZ3bm56ZzR0JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/MDJ9IbxxvDUQM/giphy.gif" alt="Cute Cat" class="cat-gif">
+            <h1>Happy Valentine's Day!</h1>
+            <p>To my favorite person,</p>
+            <p>Thank you for being with me over almost a year, It's our first valentine. I can't really express how happy I am whilst I'm making this for you and it's because you deserve every bit. Keep smiling love and we can be together for longer. You make every day brighter just by being you. I'm so lucky to have you in my life!</p>
+            <p>With love, <br> <strong>Tihan</strong></p>
+            <button onclick="closeLetter()">Close Letter</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
